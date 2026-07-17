@@ -1,0 +1,1408 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>滋賀県長浜市の街の発展・開発史</title>
+  <meta name="description" content="城下町・門前町・港町・鉄道結節点・黒壁再生から読む、まちづくりのメカニズム">
+  <link rel="canonical" href="https://ryuju-alt.github.io/nagahama-development-history-report/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="滋賀県長浜市の街の発展・開発史">
+  <meta property="og:description" content="城下町・門前町・港町・鉄道結節点・黒壁再生から読む、まちづくりのメカニズム">
+  <meta property="og:image" content="https://ryuju-alt.github.io/nagahama-development-history-report/preview.png">
+  <meta property="og:url" content="https://ryuju-alt.github.io/nagahama-development-history-report/">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+:root {
+  --bg: #f7f4ee;
+  --paper: #fffdf8;
+  --ink: #23211d;
+  --muted: #6f695f;
+  --line: #ded5c8;
+  --accent: #8b2f2a;
+  --accent-2: #1f5d5b;
+  --gold: #a96e22;
+  --leaf: #556c3f;
+  --lake: #2b7470;
+  --soft: #efe7da;
+  --code: #29251f;
+  --code-bg: #f1eadf;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", "Segoe UI", sans-serif;
+  line-height: 1.85;
+  letter-spacing: 0;
+}
+a { color: var(--accent-2); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+a:hover { color: var(--accent); }
+.site-header {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 24px 42px;
+  background:
+    linear-gradient(110deg, rgba(23, 30, 27, 0.94) 0%, rgba(28, 43, 38, 0.82) 48%, rgba(79, 58, 35, 0.48) 100%),
+    url("assets/nagahama-castle.jpg") center 54% / cover;
+  color: #fffdf8;
+  border-bottom: 6px solid var(--accent);
+}
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -44px -8%;
+  height: 110px;
+  background:
+    radial-gradient(ellipse at 18% 60%, rgba(255, 253, 248, 0.16), transparent 58%),
+    linear-gradient(90deg, transparent, rgba(180, 219, 211, 0.2), transparent);
+  transform: rotate(-2deg);
+}
+.header-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.kicker {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  color: #d8ccb8;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.4vw, 4.25rem);
+  line-height: 1.18;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.site-header h1 span {
+  display: inline-block;
+}
+.subtitle span {
+  display: inline;
+}
+.subtitle {
+  margin: 20px 0 0;
+  max-width: 880px;
+  color: #eee5d5;
+  font-size: clamp(1rem, 1.7vw, 1.28rem);
+}
+.meta {
+  margin-top: 22px;
+  color: #d2c6b6;
+  font-size: 0.92rem;
+}
+.hero-photos {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr;
+  gap: 12px;
+  margin-top: 34px;
+}
+.hero-photo {
+  position: relative;
+  min-height: 190px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 253, 248, 0.28);
+  border-radius: 8px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
+}
+.hero-photo:first-child {
+  min-height: 260px;
+}
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.06) contrast(1.04);
+}
+.hero-photo figcaption {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  padding: 0.32rem 0.62rem;
+  color: #fffdf8;
+  background: rgba(31, 37, 32, 0.72);
+  border: 1px solid rgba(255, 253, 248, 0.26);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+.photo-credit {
+  margin: 10px 0 0;
+  color: #d8ccb8;
+  font-size: 0.78rem;
+}
+.layout {
+  display: block;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 34px 24px 64px;
+}
+.toc-panel {
+  margin: 0 0 20px;
+  padding: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 26px rgba(44, 37, 27, 0.07);
+}
+.toc-panel summary {
+  cursor: pointer;
+  padding: 16px 18px;
+  color: var(--accent-2);
+  font-weight: 750;
+}
+.toc-panel summary::marker {
+  color: var(--accent);
+}
+.toc-panel[open] {
+  padding-bottom: 16px;
+}
+.toc-panel .toc {
+  padding: 0 18px 4px;
+}
+.toc-panel h2 { margin-top: 0; font-size: 1rem; border: 0; padding: 0; }
+.toc-panel ul { list-style: none; margin: 0; padding-left: 0; }
+.toc-panel li { margin: 0.38rem 0; }
+.toc-panel li li { padding-left: 0.9rem; }
+.toc-panel a { color: var(--muted); text-decoration: none; font-size: 0.9rem; line-height: 1.45; }
+.toc-panel a:hover { color: var(--accent); text-decoration: underline; }
+article {
+  min-width: 0;
+  padding: clamp(30px, 4.6vw, 62px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(44, 37, 27, 0.1);
+}
+article > h1:first-child { display: none; }
+h2 {
+  margin: 3.1rem 0 1.1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid var(--line);
+  color: #1f2520;
+  font-size: clamp(1.55rem, 2.5vw, 2.35rem);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+h3 {
+  margin: 2.2rem 0 0.75rem;
+  color: var(--accent);
+  font-size: clamp(1.18rem, 1.7vw, 1.55rem);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+h4 { margin: 1.8rem 0 0.6rem; font-size: 1.08rem; color: #4a342e; }
+p { margin: 0 0 1.1rem; overflow-wrap: anywhere; }
+ul, ol { padding-left: 1.35rem; margin: 0.6rem 0 1.2rem; }
+li { margin: 0.32rem 0; }
+strong { font-weight: 750; }
+hr {
+  margin: 2.6rem 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+blockquote {
+  margin: 1.4rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--accent-2);
+  background: #f4eee4;
+  color: #423d35;
+}
+.table-wrap { overflow-x: auto; margin: 1.2rem 0 1.8rem; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+  font-size: 0.94rem;
+  background: #fffefb;
+}
+th, td {
+  padding: 0.72rem 0.78rem;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+th { background: var(--soft); color: #342f28; text-align: left; }
+tr:nth-child(even) td { background: #fbf7ef; }
+code {
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+  color: var(--code);
+  background: var(--code-bg);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+pre {
+  overflow-x: auto;
+  padding: 1rem 1.1rem;
+  border-radius: 8px;
+  background: #27251f;
+  color: #f6efe2;
+  line-height: 1.6;
+}
+pre code { padding: 0; color: inherit; background: transparent; }
+.source-note {
+  margin-top: 48px;
+  padding: 16px 18px;
+  background: #f3ece2;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.visual-summary {
+  margin: 0 0 3rem;
+  padding: 0 0 2.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.visual-summary h2 {
+  margin-top: 0.2rem;
+}
+.visual-summary h3,
+.visual-summary h4 {
+  color: var(--ink);
+}
+.visual-kicker {
+  margin: 0 0 0.4rem;
+  color: var(--accent-2);
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.visual-lead {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+.flow-spine {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin: 1.7rem 0 2.1rem;
+}
+.flow-spine::before {
+  content: "";
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 2.1rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), #6e6a2e);
+  opacity: 0.7;
+}
+.flow-era {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.85rem 0.8rem 1rem;
+  background: #fffaf1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+.flow-era:hover {
+  color: inherit;
+  border-color: rgba(31, 93, 91, 0.5);
+  box-shadow: 0 14px 28px rgba(44, 37, 27, 0.12);
+  transform: translateY(-2px);
+}
+.flow-era::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0 auto 0.7rem;
+  background: var(--paper);
+  border: 3px solid var(--accent-2);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #fffaf1;
+}
+.flow-year {
+  display: block;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+.flow-era h3 {
+  margin: 0.25rem 0 0.45rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+.flow-era p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.visual-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 18px;
+}
+.visual-panel {
+  padding: 1rem;
+  background: #fffaf1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.visual-panel h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.mechanism-loop {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.loop-step {
+  min-height: 150px;
+  padding: 0.8rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.loop-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: 0.55rem;
+  color: #fffdf8;
+  background: var(--accent);
+  border-radius: 50%;
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+.loop-step h4 {
+  margin: 0 0 0.45rem;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+.loop-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.network-panel {
+  grid-row: span 2;
+}
+.network-diagram {
+  width: 100%;
+  min-height: 300px;
+}
+.network-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.network-diagram .water {
+  fill: #dceeea;
+  stroke: var(--accent-2);
+  stroke-width: 1.5;
+}
+.network-diagram .land {
+  fill: #f7efd9;
+  stroke: var(--line);
+}
+.network-diagram .route {
+  fill: none;
+  stroke: var(--accent-2);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 7 7;
+}
+.network-diagram .axis-route {
+  stroke: var(--accent);
+  stroke-dasharray: none;
+}
+.network-diagram .node {
+  fill: var(--paper);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.network-diagram .node-alt {
+  stroke: var(--accent-2);
+}
+.network-diagram text {
+  fill: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+.network-caption {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.metric-panel {
+  grid-column: 1 / -1;
+}
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.metric-card {
+  padding: 0.9rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.metric-label {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.metric-value {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.metric-note {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+.bar-pair {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.6rem;
+}
+.bar-row {
+  display: grid;
+  grid-template-columns: 5.3rem 1fr;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.bar-track {
+  height: 0.55rem;
+  overflow: hidden;
+  background: #ece3d4;
+  border-radius: 999px;
+}
+.bar-fill {
+  display: block;
+  height: 100%;
+  width: var(--w);
+  background: var(--accent-2);
+  border-radius: inherit;
+}
+.action-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
+}
+.action-item {
+  padding: 0.75rem;
+  background: #f3f7ef;
+  border: 1px solid #d6dfce;
+  border-radius: 8px;
+}
+.action-item strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--accent-2);
+  line-height: 1.35;
+}
+.action-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+@media print {
+  body { background: #fff; }
+  .site-header { color: #111; background: #fff; border-bottom: 1px solid #999; }
+  .subtitle, .meta, .kicker { color: #333; }
+  .layout { display: block; padding: 0; }
+  .toc-panel { display: none; }
+  article { border: 0; box-shadow: none; padding: 0; }
+  a { color: #111; text-decoration: underline; }
+}
+@media (max-width: 900px) {
+  .layout { padding: 22px 12px 44px; }
+  .toc-panel { margin-bottom: 14px; }
+  article { padding: 26px 16px 38px; }
+  .site-header { padding: 42px 18px 34px; }
+  .site-header h1 { font-size: clamp(1.65rem, 8.4vw, 2.1rem); }
+  h2 { font-size: clamp(1.38rem, 7vw, 1.85rem); }
+  .subtitle span { display: block; }
+  .subtitle,
+  .photo-credit,
+  .toc-panel a { overflow-wrap: anywhere; }
+  article p,
+  article li,
+  .visual-summary h2,
+  .flow-era h3,
+  .flow-era p { word-break: break-all; }
+  .hero-photos { grid-template-columns: 1fr; }
+  .hero-photo,
+  .hero-photo:first-child { min-height: 210px; }
+  .flow-spine,
+  .visual-grid,
+  .mechanism-loop,
+  .metric-strip,
+  .action-map { grid-template-columns: 1fr; }
+  .flow-spine::before {
+    left: 1.55rem;
+    right: auto;
+    top: 1.1rem;
+    bottom: 1.1rem;
+    width: 3px;
+    height: auto;
+  }
+  .flow-era {
+    padding-left: 3.15rem;
+  }
+  .flow-era::before {
+    position: absolute;
+    left: 0.9rem;
+    top: 1.2rem;
+    margin: 0;
+  }
+  .network-panel,
+  .metric-panel { grid-column: auto; grid-row: auto; }
+}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="kicker">Nagahama Urban Development History</p>
+      <h1><span>滋賀県長浜市の</span><span>街の発展・開発史</span></h1>
+      <p class="subtitle"><span>城下町・門前町・港町・鉄道結節点・</span><span>黒壁再生から読む、まちづくりのメカニズム</span></p>
+      <p class="meta">作成日: 2026-07-17</p>
+      <div class="hero-photos" aria-label="長浜を象徴する風景">
+        <figure class="hero-photo">
+          <img src="assets/nagahama-castle.jpg" alt="琵琶湖畔に立つ長浜城歴史博物館">
+          <figcaption>湖から始まる城下町</figcaption>
+        </figure>
+        <figure class="hero-photo">
+          <img src="assets/kurokabe-square.jpg" alt="黒壁スクエアと大手門通りの町並み">
+          <figcaption>町家を使い直す黒壁</figcaption>
+        </figure>
+        <figure class="hero-photo">
+          <img src="assets/former-nagahama-station.jpg" alt="旧長浜駅舎">
+          <figcaption>鉄道が街をつなぎ直す</figcaption>
+        </figure>
+      </div>
+      <p class="photo-credit">写真: Wikimedia Commons（長浜城: baggio4ever, CC BY 3.0 / 黒壁スクエア: Kyoww, CC BY-SA 3.0 / 旧長浜駅舎: Tokyo-Good, CC BY-SA 4.0）</p>
+    </div>
+  </header>
+  <main class="layout">
+    <details class="toc-panel" aria-label="目次">
+      <summary>目次を開く</summary>
+      <div class="toc"><span class="toctitle">目次</span><ul>
+<li><a href="#visual-summary">ビジュアルサマリー</a></li>
+<li><a href="#_2">調査の視点</a></li>
+<li><a href="#_3">要旨</a></li>
+<li><a href="#1-1573">1. 城下町の誕生（1573〜）</a><ul>
+<li><a href="#11">1.1 何が起きたか</a></li>
+<li><a href="#12">1.2 空間構造: 城・港・水路・職能町を一体化した町建て</a></li>
+<li><a href="#13">1.3 担い手: 小谷城下からの移転と町衆自治</a></li>
+<li><a href="#14">1.4 資金構造・制度: 年貢免除と朱印地</a></li>
+<li><a href="#_4">まちづくりへの示唆</a></li>
+</ul>
+</li>
+<li><a href="#2">2. 近世: 廃城後の存続戦略</a><ul>
+<li><a href="#21">2.1 廃城しても町が残った理由</a></li>
+<li><a href="#22">2.2 大通寺門前町: 信仰を日常消費へ接続した都市核</a></li>
+<li><a href="#23">2.3 北国街道の宿場、琵琶湖水運の港町</a></li>
+<li><a href="#24">2.4 産業: 浜縮緬・ビロード・浜蚊帳が町衆文化を支えた</a></li>
+<li><a href="#25">2.5 曳山祭: 町衆の経済力と自治の可視化</a></li>
+<li><a href="#_5">まちづくりへの示唆</a></li>
+</ul>
+</li>
+<li><a href="#3">3. 近代（明治〜戦前）</a><ul>
+<li><a href="#31-1882">3.1 1882年長浜駅開業: 鉄道と汽船の結節点</a></li>
+<li><a href="#32">3.2 東海道本線ルート確定による通過点化</a></li>
+<li><a href="#33">3.3 近代化を支えた町衆資本</a></li>
+<li><a href="#_6">まちづくりへの示唆</a></li>
+</ul>
+</li>
+<li><a href="#4-1980">4. 戦後〜1980年代: モータリゼーション・郊外化と中心市街地空洞化</a><ul>
+<li><a href="#41">4.1 公共施設と都市機能の分散</a></li>
+<li><a href="#42">4.2 自動車保有と郊外大型店</a></li>
+<li><a href="#43-did">4.3 DID拡大と密度低下</a></li>
+<li><a href="#44">4.4 商店街空洞化の実態</a></li>
+<li><a href="#45">4.5 何が機能しなくなったのか</a></li>
+<li><a href="#_7">まちづくりへの示唆</a></li>
+</ul>
+</li>
+<li><a href="#5-1988">5. 平成の再生（1988〜）: 黒壁と中心市街地再生の両面</a><ul>
+<li><a href="#51">5.1 黒壁以前の準備: 市民会議、城再興、博物館都市構想</a></li>
+<li><a href="#52">5.2 黒壁の設立経緯と出資構造</a></li>
+<li><a href="#53">5.3 事業モデル: 旧銀行保存ではなく、ガラスという新コンテンツを入れた</a></li>
+<li><a href="#54">5.4 空き店舗対策: 所有と利用の分離、利用権の集約</a></li>
+<li><a href="#55">5.5 周辺のまちづくり会社群</a></li>
+<li><a href="#56">5.6 中心市街地活性化基本計画と数値目標</a></li>
+<li><a href="#57">5.7 成功要因</a></li>
+<li><a href="#58">5.8 限界と経営難</a></li>
+<li><a href="#59-2020">5.9 2020年代の再建: 第二会社方式へ</a></li>
+<li><a href="#_8">まちづくりへの示唆</a></li>
+</ul>
+</li>
+<li><a href="#6">6. 現在: 合併後の市域、人口動態、都市計画の方向性</a><ul>
+<li><a href="#61">6.1 平成の合併後の市域</a></li>
+<li><a href="#62">6.2 人口動態</a></li>
+<li><a href="#63">6.3 現行都市計画・立地適正化計画の方向性</a></li>
+<li><a href="#64">6.4 観光の現在: 来訪者数より宿泊・滞在への転換</a></li>
+<li><a href="#65">6.5 「湖の辺のまち 長浜未来ビジョン」</a></li>
+<li><a href="#_9">まちづくりへの示唆</a></li>
+</ul>
+</li>
+<li><a href="#7">7. 横断的なまちづくり原則</a><ul>
+<li><a href="#71">7.1 「核」ではなく「核の連鎖」をつくる</a></li>
+<li><a href="#72">7.2 町家・寺院・湖岸を「保存対象」ではなく「運営資産」にする</a></li>
+<li><a href="#73">7.3 利用権を束ねる会社・基金・組合を持つ</a></li>
+<li><a href="#74">7.4 「観光客数」から「滞在の質」へ指標を変える</a></li>
+<li><a href="#75">7.5 長浜らしい「資本循環」を明示する</a></li>
+</ul>
+</li>
+<li><a href="#_10">参考資料・主要出典</a><ul>
+<li><a href="#_11">長浜市公式・行政資料</a></li>
+<li><a href="#_12">国・公的機関の事例資料</a></li>
+<li><a href="#_13">学術論文・研究資料</a></li>
+<li><a href="#_14">黒壁・報道</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </details>
+    <article>
+      <h1 id="_1">滋賀県長浜市の街の発展・開発史</h1>
+<section id="visual-summary" class="visual-summary" aria-labelledby="visual-summary-title">
+  <p class="visual-kicker">Visual Summary</p>
+  <h2 id="visual-summary-title">長浜は、核を失うたびに次の核をつないできた</h2>
+  <p class="visual-lead">一見すると、長浜は「秀吉の城下町」から始まる街である。もちろん、それは正しい。だが面白いのは、城がなくなってからだ。寺が残り、街道が残り、湊が残り、駅が来て、町家がもう一度使われた。長浜の発展史は、古い核を捨てずに次の核へ接続してきた歴史である。</p>
+
+  <div class="flow-spine" aria-label="長浜の開発史の流れ">
+    <a class="flow-era" href="#1-1573">
+      <span class="flow-year">1573〜</span>
+      <h3>城下町をつくる</h3>
+      <p>城・港・水路・職能町を同時に置き、湖と街道の力を町へ引き込んだ。</p>
+    </a>
+    <a class="flow-era" href="#2">
+      <span class="flow-year">1615〜</span>
+      <h3>城なき町が残る</h3>
+      <p>大通寺、北国街道、長浜湊、地場産業が、廃城後の都市機能を引き受けた。</p>
+    </a>
+    <a class="flow-era" href="#3">
+      <span class="flow-year">1882〜</span>
+      <h3>鉄道で跳ねる</h3>
+      <p>旧長浜駅と太湖汽船が接続し、長浜は鉄道と湖上交通の乗換拠点になった。</p>
+    </a>
+    <a class="flow-era" href="#4-1980">
+      <span class="flow-year">1960s〜80s</span>
+      <h3>中心がほどける</h3>
+      <p>車、郊外大型店、公共施設移転が重なり、歩いて使う中心部の理由が弱くなった。</p>
+    </a>
+    <a class="flow-era" href="#5-1988">
+      <span class="flow-year">1988〜</span>
+      <h3>黒壁で編み直す</h3>
+      <p>旧銀行と町家を、ガラス・飲食・回遊へ転換した。保存ではなく運営だった。</p>
+    </a>
+    <a class="flow-era" href="#6">
+      <span class="flow-year">2006〜現在</span>
+      <h3>多核都市へ移る</h3>
+      <p>合併後の広い市域を、駅・黒壁・湖岸・旧町の核で結び直す段階に入った。</p>
+    </a>
+  </div>
+
+  <div class="visual-grid">
+    <section class="visual-panel">
+      <h3>機能した仕組みは、いつも4層だった</h3>
+      <p>強い施設が一つあれば街が動く、とは限らない。長浜で効いたのは、場所、主体、資金、制度が同じ方向を向いた瞬間である。</p>
+      <div class="mechanism-loop" aria-label="長浜型まちづくりの4層メカニズム">
+        <div class="loop-step">
+          <span>1</span>
+          <h4>空間を接続する</h4>
+          <p>城と港、寺と門前、駅と汽船、黒壁と町家。点ではなく線が人を動かした。</p>
+        </div>
+        <div class="loop-step">
+          <span>2</span>
+          <h4>担い手を束ねる</h4>
+          <p>町衆、山組、商工業者、第三セクター、まちづくり会社が、運営の厚みを作った。</p>
+        </div>
+        <div class="loop-step">
+          <span>3</span>
+          <h4>資金を循環させる</h4>
+          <p>免租、寄附、地場産業の富、民間出資、転貸収益が、街へ戻る回路になった。</p>
+        </div>
+        <div class="loop-step">
+          <span>4</span>
+          <h4>制度で支える</h4>
+          <p>朱印地、景観施策、中活計画、立地適正化計画が、投資の方向を定めた。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-panel network-panel">
+      <h3>長浜を感じる回遊の骨格</h3>
+      <div class="network-diagram" role="img" aria-label="琵琶湖、長浜城、旧駅舎、大通寺、黒壁、北国街道を結ぶ概念図">
+        <svg viewBox="0 0 520 360" aria-hidden="true">
+          <path class="water" d="M20,44 C78,20 138,22 188,52 C247,88 288,78 336,56 C390,32 454,36 500,72 L500,338 L20,338 Z"></path>
+          <path class="land" d="M130,48 C198,62 246,106 280,158 C318,216 382,218 450,198 L450,312 L108,312 C86,236 84,120 130,48 Z"></path>
+          <path class="route axis-route" d="M120,272 C176,224 222,192 272,160 C318,130 356,108 418,80"></path>
+          <path class="route" d="M86,218 C152,202 210,206 270,230 C332,254 392,252 458,222"></path>
+          <path class="route" d="M218,294 C220,244 224,202 240,162 C254,126 282,94 326,62"></path>
+          <circle class="node" cx="146" cy="250" r="26"></circle>
+          <text x="146" y="246" text-anchor="middle">旧駅舎</text>
+          <text x="146" y="263" text-anchor="middle">鉄道</text>
+          <circle class="node node-alt" cx="230" cy="184" r="28"></circle>
+          <text x="230" y="181" text-anchor="middle">黒壁</text>
+          <text x="230" y="198" text-anchor="middle">町家</text>
+          <circle class="node" cx="324" cy="126" r="28"></circle>
+          <text x="324" y="123" text-anchor="middle">大通寺</text>
+          <text x="324" y="140" text-anchor="middle">門前</text>
+          <circle class="node node-alt" cx="126" cy="94" r="27"></circle>
+          <text x="126" y="91" text-anchor="middle">長浜城</text>
+          <text x="126" y="108" text-anchor="middle">湖岸</text>
+          <circle class="node" cx="392" cy="76" r="26"></circle>
+          <text x="392" y="72" text-anchor="middle">北国</text>
+          <text x="392" y="89" text-anchor="middle">街道</text>
+          <text x="64" y="318">琵琶湖・長浜港</text>
+          <text x="366" y="300">駅 - 黒壁 - 寺 - 湖岸</text>
+        </svg>
+      </div>
+      <p class="network-caption">現代の鍵は、黒壁だけを強くすることではない。駅、黒壁、大通寺、米川、豊公園、湖岸を、もう一度「歩ける一筆書き」に戻すことだ。</p>
+    </section>
+
+    <section class="visual-panel metric-panel">
+      <h3>数字で見る、転換点の温度差</h3>
+      <div class="metric-strip">
+        <div class="metric-card">
+          <p class="metric-label">秀吉期の都市インセンティブ</p>
+          <p class="metric-value">町屋敷年貢 300石免除</p>
+          <p class="metric-note">移転した町衆に、商いへ再投資する余地を与えた。</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-label">中心商店街の衰退</p>
+          <p class="metric-value">約600店 → 約150店</p>
+          <div class="bar-pair" aria-label="店舗数の変化">
+            <div class="bar-row"><span>1970年代</span><span class="bar-track"><span class="bar-fill" style="--w: 100%"></span></span></div>
+            <div class="bar-row"><span>80年代後半</span><span class="bar-track"><span class="bar-fill" style="--w: 25%"></span></span></div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <p class="metric-label">市街地密度の変化</p>
+          <p class="metric-value">9,491 → 5,352人/km²</p>
+          <div class="bar-pair" aria-label="DID人口密度の変化">
+            <div class="bar-row"><span>1960年</span><span class="bar-track"><span class="bar-fill" style="--w: 100%"></span></span></div>
+            <div class="bar-row"><span>1985年</span><span class="bar-track"><span class="bar-fill" style="--w: 56%"></span></span></div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <p class="metric-label">黒壁の初期資本</p>
+          <p class="metric-value">1億3,000万円</p>
+          <p class="metric-note">市4,000万円、民間8社9,000万円。信用は公、経営は民へ寄せた。</p>
+        </div>
+      </div>
+      <div class="action-map" aria-label="まちづくり計画に引き継ぐべき4つの方向">
+        <div class="action-item">
+          <strong>接続する</strong>
+          <p>駅、黒壁、大通寺、湖岸を別々の目的地にしない。</p>
+        </div>
+        <div class="action-item">
+          <strong>運営する</strong>
+          <p>町家や空き店舗は所有より先に利用権を束ねる。</p>
+        </div>
+        <div class="action-item">
+          <strong>循環させる</strong>
+          <p>宿泊・飲食・体験の収益を文化維持へ戻す。</p>
+        </div>
+        <div class="action-item">
+          <strong>更新する</strong>
+          <p>観光客数だけでなく、滞在、利益、地元利用を見る。</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<h2 id="_2">調査の視点</h2>
+<p>長浜を年表だけで読むと、ずいぶん器用な町に見える。城下町、門前町、港町、鉄道の町、観光の町。肩書きだけが、時代ごとに入れ替わっていくようにも見える。</p>
+<p>しかし、変わっていないものもある。長浜はいつも、湖、街道、寺、駅、町家、人の組織を結び直すことで生き延びてきた。だからここでは、出来事の順番だけでなく、何が機能し、なぜ機能したのかを、次の4つの軸で読む。</p>
+<ul>
+<li><strong>空間構造</strong>: 城・港・街道・駅・商店街・水路・町家・公共空間がどう配置され、人の流れを生んだか。</li>
+<li><strong>担い手</strong>: 町衆、山組、町年寄、寺院、商工業者、行政、第三セクター、まちづくり会社、外部人材がどう役割分担したか。</li>
+<li><strong>資金構造</strong>: 年貢免除、寄進、地場産業の蓄積、民間出資、公的補助、借家・転貸、再開発、事業収益がどう街を動かしたか。</li>
+<li><strong>制度</strong>: 楽市楽座的政策、朱印地、彦根藩の商業都市政策、景観施策、中心市街地活性化基本計画、立地適正化計画などがどう投資を誘導したか。</li>
+</ul>
+<p>主な一次資料は、長浜市の<a href="https://www.city.nagahama.lg.jp/0000001238.html">第2期歴史的風致維持向上計画</a>、国認定の<a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期長浜市中心市街地活性化基本計画</a>、長浜市の<a href="https://www.city.nagahama.lg.jp/0000001239.html">都市計画マスタープラン・立地適正化計画</a>、黒壁の<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000005/5809/kurokabe_kenzenka.pdf">第三セクター等経営健全化方針</a>である。学術・外部評価として、矢部拓也「地方小都市再生の前提条件」（<a href="https://doi.org/10.5637/jpasurban1983.2000.51">J-STAGE</a>）、黒壁を商店街コモンズとして分析した論文（<a href="https://narapu.repo.nii.ac.jp/record/987/files/KJ00008747679.pdf">奈良県立大学リポジトリ</a>）、国交省資料（<a href="https://www.mlit.go.jp/singikai/kokudosin/keikaku/jiritsu/5/shiryou5-2.pdf">自立地域社会形成事例</a>）、中小機構の中心市街地活性化協議会支援センター記事などを参照した。</p>
+<h2 id="_3">要旨</h2>
+<p>長浜は、何度も主役を失っている。城はなくなった。鉄道と汽船の結節点としての優位も、長くは続かなかった。中心商店街も、郊外化の波で大きく痩せた。</p>
+<p>それでも町は消えなかった。廃城後は寺と街道と湊が受け止め、近代には駅と港が受け止め、平成には黒壁と町家が受け止めた。長浜の強さは、ひとつの核の強さではなく、核が弱ったときに別の核へ機能を移せることにある。</p>
+<p>そこから見える中核メカニズムは、次の5点である。</p>
+<ol>
+<li>
+<p><strong>交通結節を都市の核にする力</strong><br>
+   琵琶湖水運、北国街道、中山道連絡、鉄道、駅、港が、時代ごとに都市機能を支えた。</p>
+</li>
+<li>
+<p><strong>所有ではなく運営に価値を置く力</strong><br>
+   近世の町衆自治、平成黒壁の利用権集約・転貸、町家再生バンクはいずれも、個別所有を超えて街を運営する仕組みである。</p>
+</li>
+<li>
+<p><strong>免除・寄進・出資・補助・事業収益を組み合わせる力</strong><br>
+   秀吉の町屋敷年貢免除、町民寄附による近代施設、民間8社と市の黒壁出資、公的補助と民間賃貸事業が、投資の呼び水になった。</p>
+</li>
+<li>
+<p><strong>既存ストックへ新しい内容を入れる力</strong><br>
+   城門を寺院に転用し、町家を店舗や宿に変え、旧銀行をガラス館に変えた。保存そのものではなく、使いながら意味を更新したことが機能した。</p>
+</li>
+<li>
+<p><strong>成功後の制度化と更新が不可欠であること</strong><br>
+   黒壁は成功したが、2010年代には経営難に直面した。観光客数だけに依存すると、消費単価低下、住民利用の弱さ、老朽化投資、債務が課題になる。成功モデルは固定化すると弱くなる。</p>
+</li>
+</ol>
+<hr>
+<h2 id="1-1573">1. 城下町の誕生（1573〜）</h2>
+<h3 id="11">1.1 何が起きたか</h3>
+<p>天正元年（1573）、浅井氏滅亡後、羽柴秀吉は北近江の浅井遺領を与えられ、初めて一国一城の主となった。長浜市の歴史的風致維持向上計画は、秀吉が天正2年（1574）ごろから小谷山南西の湖岸「今浜」に築城を始め、この地名を「長浜」に改めたと整理している（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>築城地として今浜が選ばれた理由は、単に湖に面していたからではない。資料では、琵琶湖の湖上交通を利用しやすいこと、中山道に近く北国街道へ通じる陸上交通の要衝であること、国友鉄砲鍛冶を掌握しやすいこと、平野で城下町造成がしやすいことが挙げられている。</p>
+<p>つまり長浜の城下町建設は、軍事拠点であると同時に、<strong>湖・街道・職能集団を一体で支配する流通都市開発</strong>だった。</p>
+<h3 id="12">1.2 空間構造: 城・港・水路・職能町を一体化した町建て</h3>
+<p>長浜城下町の特徴は、町通りが長浜城に対して縦に走る「縦町」を優先し、そこへ間口を開く町家が整然と並ぶ点にある。長浜市はこの町割りを「近世城下町のルーツ」と位置づけ、現代の主要道路ともほぼ一致するとしている（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_2-1.pdf">第2章 近世城下町の町割り</a>）。</p>
+<p>さらに重要なのは、水路と港の組み込みである。長浜城は三重の堀を持ったが、その外堀は防衛・軍港だけでなく商業利用を見据えていた。外堀を使って商業用の港をつくり、船持・船頭・水主らが集住する町を設け、米川などの水路によって町家の近くまで小舟が入れる構造にした。</p>
+<p>このため長浜城下町は、城郭都市でありながら、初期から次のような複合機能を持った。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>機能</th>
+<th>具体的な空間・町名</th>
+<th>まちづくり上の意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>政治・軍事</td>
+<td>長浜城、本丸、堀</td>
+<td>権力の可視化と治安</td>
+</tr>
+<tr>
+<td>物流</td>
+<td>外堀、米川、船町</td>
+<td>湖上交通と市街地を直結</td>
+</tr>
+<tr>
+<td>商業</td>
+<td>魚屋町、呉服町、紺屋町</td>
+<td>職能別の集積による市場形成</td>
+</tr>
+<tr>
+<td>工業</td>
+<td>鍛冶屋町、金屋町、鉄砲町、鞴町</td>
+<td>国友鉄砲鍛冶など技術集団の組み込み</td>
+</tr>
+<tr>
+<td>居住</td>
+<td>町家、背割り水路</td>
+<td>職住一体の都市生活</td>
+</tr>
+</tbody>
+</table></div>
+<p>長浜が機能した理由は、城下に人を集めただけではなく、<strong>商工業者がすぐ商売できる物理的インフラ</strong>を同時に整えたことにある。</p>
+<h3 id="13">1.3 担い手: 小谷城下からの移転と町衆自治</h3>
+<p>秀吉は、小谷城下の商人や寺院を今浜へ移して城下町の礎を築いた。強制移住を伴う新造都市は、移された人々の納得を得なければ不安定になる。そこで秀吉は、町衆への年貢米・諸役の免除を初期から行ったとされる。長浜市の計画は、この施策を新城下町を安定させるための優遇政策であり、楽市楽座令の一環と考えられると説明している（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>長浜町は52の個別町から成り、それぞれに町代と町役人組織があり、その上部に10の町組があった。代表者は「長浜町年寄十人衆」と呼ばれ、町を自分たちで動かす町衆自治の基礎になった。</p>
+<p>この構造は、現代のエリアマネジメントに近い。行政がすべてを運営するのではなく、町ごとの主体があり、その連合体が広域の意思決定を担う。初期長浜では、<strong>街区単位の自治と、町全体を束ねる十人衆の二層構造</strong>が機能した。</p>
+<h3 id="14">1.4 資金構造・制度: 年貢免除と朱印地</h3>
+<p>秀吉は天正19年（1591）、町屋敷の年貢米300石を免除する朱印状を与えた。長浜市の資料によれば、これは賤ヶ岳の合戦で長浜町衆が秀吉軍に従軍し、兵糧・弾薬の運搬や戦闘にまで参陣した恩賞であり、長浜以外では京都・大坂・大和郡山程度に限られる特例だった（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>この制度が都市開発に効いた理由は、次の3点である。</p>
+<ul>
+<li><strong>初期移住コストの補填</strong>: 小谷城下から移る商人・寺院に対して、税負担の軽減が移転インセンティブになった。</li>
+<li><strong>商業利益の内部留保</strong>: 年貢免除により、町衆が得た利益を商売、町家、祭礼、自治に再投資しやすくなった。</li>
+<li><strong>自治権の承認</strong>: 免租地の特権は、町衆が自分たちで町を運営する正統性を支えた。</li>
+</ul>
+<p>長浜の開発は、単なる「城を建てた」話ではなく、<strong>都市インフラ、職能移転、税制優遇、自治承認を束ねた総合開発</strong>だった。</p>
+<h3 id="_4">まちづくりへの示唆</h3>
+<ul>
+<li><strong>核施設だけでなく、稼働する町割りを設計する。</strong> 城、寺、駅、広場、宿泊施設を単体で置くのではなく、物流・回遊・商い・日常動線まで一体で組む必要がある。</li>
+<li><strong>移転・出店を促すには、物語より先に制度的な得がいる。</strong> 秀吉の免除政策は、町衆にとって明確な経済合理性だった。現代なら、家賃補助、改修負担の分担、営業許認可支援、共同販促、固定費軽減がこれに当たる。</li>
+<li><strong>自治組織を最初から組み込む。</strong> 開発者が全てを持つより、街区・町内・事業者の運営組織をつくり、合意形成と日常運営を任せるほうが持続しやすい。</li>
+<li><strong>水辺・水路・裏側の動線を価値化する。</strong> 長浜の初期都市構造は、表通りだけでなく水路・背割り・港が機能した。湖岸や米川を再び回遊と商いに接続する余地が大きい。</li>
+</ul>
+<hr>
+<h2 id="2">2. 近世: 廃城後の存続戦略</h2>
+<h3 id="21">2.1 廃城しても町が残った理由</h3>
+<p>元和元年（1615）、長浜城は廃城となり、建物や石垣の多くは彦根城へ運ばれた。城跡は農耕地として使われ、城郭の縄張は徹底的に破壊された。しかし、長浜の町は消えなかった。</p>
+<p>理由は明確である。彦根藩が、秀吉時代の町屋敷年貢米300石免除の特権を継続し、長浜町を領内の中心的商業都市として位置づけたからである。長浜市の歴史的風致維持向上計画は、町年寄十人衆の家筋から選ばれる町年寄三人が町全体の行政を担い、江戸期の長浜は町運営のほとんどを町人が担う自治の町として繁栄したと整理している（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>元禄8年（1695）の史料からは、江戸時代の長浜町の家数は1,000〜1,300軒、人口は4,600〜4,900人程度と推定されている。城が消えても、町割り、免税地、町衆自治、商業機能が残ったため、都市は存続した。</p>
+<h3 id="22">2.2 大通寺門前町: 信仰を日常消費へ接続した都市核</h3>
+<p>大通寺は、真宗大谷派の長浜別院であり、市街地のほぼ中央に位置する。基礎は、戦国期に町年寄らが本願寺支援の相談のために設けた「総会所」にあるとされる。慶安2年（1649）には彦根藩主井伊直孝から現在地に80間四方の寺地を寄進され、境内整備が進められた（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_2-3.pdf">第2章 大通寺と門前町</a>）。</p>
+<p>大通寺が機能した理由は、寺院単体ではなく、門前の商業と広域信仰圏を持っていた点にある。</p>
+<ul>
+<li>大通寺周辺には、江戸時代から門前町が形成された。</li>
+<li>山門から南へ伸びる通りには、東御堂前町・西御堂前町・十軒町・南伊部町などが並び、商店が集積した。</li>
+<li>旧長浜町を訪れることは「浜行き」と呼ばれ、大通寺参詣と買い物、食事が結びついた。</li>
+<li>講場や講中が、参詣者の受け入れ、法要、宿泊、世話役を担った。</li>
+</ul>
+<p>これは、現代でいえば「信仰施設を核にした日帰り・滞在・買い回りの都市体験」である。大通寺は、長浜の中心市街地に宗教的な集客核と公共空間を与えた。</p>
+<h3 id="23">2.3 北国街道の宿場、琵琶湖水運の港町</h3>
+<p>北国街道は、中山道鳥居本宿付近から分岐し、米原、長浜、木之本を経て越前へ至る街道である。長浜市の資料は、長浜・米原には彦根藩の主要湊があり、彦根の松原湊とあわせて「彦根三湊」と称されたとする。北国街道の長浜からは北国脇往還を経て関ヶ原へ通じる道も開け、物資輸送路として重要だった（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>長浜湊は、秀吉の城下町建設とともに外港として整備され、廃城後も北国街道と琵琶湖水運をつなぐ湊であり続けた。彦根藩成立後は、問屋、舟持、水主、船大工などが居住し、彦根領内の年貢米や諸物資の船積みを行う湖北の中心港となった。</p>
+<p>ここで機能したのは、<strong>陸上交通と湖上交通の結節</strong>である。北国街道だけ、または琵琶湖港だけなら、長浜はここまで強くならない。街道から集まる物資を湊で船積みし、湖から来る物資を町で処理することで、長浜は内陸と湖の交換点になった。</p>
+<h3 id="24">2.4 産業: 浜縮緬・ビロード・浜蚊帳が町衆文化を支えた</h3>
+<p>長浜は、江戸時代中期以降、浜糸、浜縮緬、浜蚊帳、浜ビロードの生産・流通の町として栄えた。長浜市の資料は、浜縮緬が昭和47年（1972）に1,854,025反の生産を記録してピークを示し、ビロードを材料とする花緒が全国市場の約70%を占めた時期があったとする（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>重要なのは、地場産業の富が、単に個人資産として蓄積されたのではなく、曳山祭、町家、教育、近代施設、文化活動へ再投資された点である。産業は、町衆自治と祭礼文化の財源になった。</p>
+<h3 id="25">2.5 曳山祭: 町衆の経済力と自治の可視化</h3>
+<p>長浜曳山祭は、長濱八幡宮の祭礼として、4月13日から16日を中心に行われる。秀吉が男子出生を祝い町人に砂金を与え、その金子で曳山を造営したとする伝承があるが、長浜市の資料は「いわれている」と整理しており、厳密には伝承として扱うのが適切である（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_2-2.pdf">第2章 長浜曳山祭</a>）。</p>
+<p>祭礼が都市開発史上重要なのは、山組の構造である。</p>
+<ul>
+<li>江戸時代の長浜町52町を基礎に、13の山組が編成された。</li>
+<li>13山組は、太刀渡りを行う長刀組と、曳山狂言を行う12山組に分かれる。</li>
+<li>各山組は曳山を収納する山蔵を持ち、山蔵はおおむね山組の区域内または近接地に置かれた。</li>
+<li>山蔵は防火・湿度管理のため、川岸や水路の近くに建てられる傾向がある。</li>
+<li>13の山蔵すべてが昭和60年（1985）に滋賀県指定有形文化財に指定された。</li>
+</ul>
+<p>曳山祭は、観光イベントではなく、<strong>町の組織・資金・技術・空間を年に一度動員する自治の総合装置</strong>である。山組、町家、山蔵、水路、職人技術、子ども歌舞伎、若衆の稽古が、町内の社会資本を維持してきた。</p>
+<h3 id="_5">まちづくりへの示唆</h3>
+<ul>
+<li><strong>単一機能に依存しない都市にする。</strong> 長浜は城を失っても、門前町、宿場町、港町、産業都市として機能した。現代の開発も、宿泊だけ、飲食だけ、観光だけでは弱い。</li>
+<li><strong>祭礼や寺社を、イベントではなく運営組織として見る。</strong> 曳山祭の価値は集客だけでなく、山組という地域運営単位を残している点にある。事業計画では、山組・自治会・寺院・商店街を「演出対象」ではなく「共同運営者」として扱う必要がある。</li>
+<li><strong>買い物・参詣・食事・滞在を重ねる。</strong> 大通寺の「浜行き」は、信仰と消費と社交が結びついていた。現代でも、寺院、湖岸、黒壁、宿泊、飲食を一筆書きにすることで滞在時間が伸びる。</li>
+<li><strong>産業収益を文化維持へ循環させる。</strong> 地場産業の富が曳山や町家に回ったように、現代の宿泊・飲食・体験収益も、文化財修理、祭礼、町家維持へ還流する仕組みを明示したほうがよい。</li>
+</ul>
+<hr>
+<h2 id="3">3. 近代（明治〜戦前）</h2>
+<h3 id="31-1882">3.1 1882年長浜駅開業: 鉄道と汽船の結節点</h3>
+<p>明治15年（1882）、長浜・敦賀間の一部として鉄道が開通した。長浜市の資料は、これを国内で7番目の鉄道開通とし、旧長浜駅舎を国内に現存する最古の駅舎と説明している（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>当時の長浜町民は、政府に対して駅設置を願い出るなど、駅誘致に熱心だった。ここでも、長浜の町衆は受け身ではなかった。近世の港町・宿場町が、明治の鉄道都市へ転換するために、積極的に新インフラを取りに行った。</p>
+<p>鉄道開業と同年、太湖汽船株式会社が設立され、大津・長浜間の鉄道開業までの代替として蒸気船の運航が始まった。長浜港は明治16年（1883）に竣工し、翌年には鉄道局に買い上げられた。これにより、長浜は<strong>鉄道と湖上交通の乗換拠点</strong>になった。</p>
+<h3 id="32">3.2 東海道本線ルート確定による通過点化</h3>
+<p>この繁栄は長くは続かなかった。明治22年（1889）、東海道線全通により鉄道連絡船が廃止されると、長浜港は鉄道貨客の結節点としての役割を失った。</p>
+<p>ただし、長浜港は消えたわけではない。長浜市の資料は、連絡船廃止後も、長浜港が琵琶湖観光の遊覧船発着港、湖北・湖西一帯からの物資輸送の集散港として存続し、明治40年（1907）の乗客数は大津に次いで琵琶湖第2位だったとする（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>ここに長浜の近代的な課題が見える。広域幹線のルート選択は、都市の運命を大きく変える。結節点として繁栄しても、幹線ルートが変われば、都市は通過点化・周縁化する。その時に残るのは、港、駅舎、町並み、地場産業、教育、文化といった複数の資産である。</p>
+<h3 id="33">3.3 近代化を支えた町衆資本</h3>
+<p>長浜は近代化にも積極的だった。明治4年（1871）には県下初の「滋賀県第一小学校」が生まれ、明治7年（1874）に開知学校が建てられた。長浜市の資料は、その建設費の85%が長浜町民の寄附でまかなわれたとする（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">長浜市 歴史的風致維持向上計画 第1章</a>）。</p>
+<p>明治期には小学校、国立銀行、鉄道、港、近代建築などが現れた。これは、行政主導だけではなく、近世から続く町衆の資本蓄積と進取性が近代インフラへ向かった結果である。</p>
+<h3 id="_6">まちづくりへの示唆</h3>
+<ul>
+<li><strong>交通結節は短期優位であり、固定資産化しない。</strong> 駅や港があるだけでは永続しない。ルート変更に備え、結節点から生まれる人流を、文化・産業・宿泊・教育へ転換する必要がある。</li>
+<li><strong>新しいインフラは、地域側が取りに行く。</strong> 長浜駅誘致のように、地域が必要性を理解し、行政・国へ働きかける主体性が重要である。</li>
+<li><strong>寄附や出資の文化を現代化する。</strong> 開知学校の85%寄附は、町衆が近代教育を自分たちの投資対象と見たことを示す。現代なら、まちづくりファンド、ふるさと納税、地元企業出資、会員制、優先利用権などへ翻訳できる。</li>
+<li><strong>通過点化への備えとして、滞在理由を重ねる。</strong> 駅・高速道路・湖岸動線は、来訪のきっかけでしかない。食、宿、体験、学び、祭、信仰、湖上アクティビティを束ね、通過を滞在へ変える必要がある。</li>
+</ul>
+<hr>
+<h2 id="4-1980">4. 戦後〜1980年代: モータリゼーション・郊外化と中心市街地空洞化</h2>
+<h3 id="41">4.1 公共施設と都市機能の分散</h3>
+<p>戦後から高度成長期にかけて、長浜の中心市街地は機能を外へ出していった。第2期中心市街地活性化基本計画は、昭和30年頃から公共公益施設の多くが中心部から縁辺部へ移転し、高度経済成長期以降は郊外部へ移転したと整理している（出典: <a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期長浜市中心市街地活性化基本計画</a>）。</p>
+<p>主な移転例として、長浜市役所、市立長浜病院、長浜警察署、保健所、税務署、長浜郵便局などが挙げられている。中心部には図書館、長浜城歴史博物館、旧長浜駅舎鉄道資料館、曳山博物館などが新たに立地したが、日常生活を支える業務・行政・医療機能の分散は、中心部の来訪理由を弱めた。</p>
+<h3 id="42">4.2 自動車保有と郊外大型店</h3>
+<p>モータリゼーションは、中心市街地の商業構造を大きく変えた。長浜市の資料では、自動車保有台数は平成7年（1995）の82,711台から平成22年（2010）の97,042台へ増加し、成人市民がおおむね1人1台の自動車を保有する状況とされる（出典: <a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期長浜市中心市街地活性化基本計画</a>）。</p>
+<p>国交省資料は、国道8号バイパス整備（1969）、北陸自動車道長浜IC整備（1980）、郊外開発の進展、大型ショッピングセンター出店発表（1979）を、中心市街地衰退の背景として挙げる（出典: <a href="https://www.mlit.go.jp/singikai/kokudosin/keikaku/jiritsu/5/shiryou5-2.pdf">国土交通省 自立地域社会形成事例</a>）。</p>
+<p>第2期中心市街地活性化基本計画では、大規模小売店舗27店舗のうち、中心市街地内は長浜ショッパーズスクエアなど少数で、大部分が周辺・郊外に立地している。特に昭和60年代以降、郊外店舗が急増した。</p>
+<h3 id="43-did">4.3 DID拡大と密度低下</h3>
+<p>市街地は広がったが、密度は下がった。第2期中心市街地活性化基本計画によれば、DID地区は昭和35年（1960）の2.3平方キロメートル・人口21,830人・人口密度9,491人/平方キロメートルから、昭和60年（1985）には4.3平方キロメートル・人口23,012人・人口密度5,352人/平方キロメートルへ変化した。市街地面積は拡大した一方、人口密度は大きく低下した（出典: <a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期長浜市中心市街地活性化基本計画</a>）。</p>
+<p>この変化は、商店街の衰退だけでなく、自治会、山組、町家維持にも影響する。人口が外縁部へ移ると、中心部の担い手が減り、祭礼や町家の維持負担が重くなる。</p>
+<h3 id="44">4.4 商店街空洞化の実態</h3>
+<p>黒壁を商店街コモンズとして分析した論文は、1970年代の中心商店街には約600店舗があり、月間来街者数は約20万人だったが、1980年代後半には店舗数が約150軒に減少し、月間来街者数も約3,000人という状況だったと整理している（出典: <a href="https://narapu.repo.nii.ac.jp/record/987/files/KJ00008747679.pdf">奈良県立大学リポジトリ論文</a>）。</p>
+<p>この数字は、黒壁以前の危機感を理解するうえで重要である。中心市街地の問題は「古い町並みが残っていた」ことではない。むしろ、古い町並みはあっても、空き店舗化し、人流も担い手も失われていた。</p>
+<h3 id="45">4.5 何が機能しなくなったのか</h3>
+<p>戦後から1980年代にかけて機能不全に陥ったのは、次の連鎖である。</p>
+<ol>
+<li>公共施設と大型商業が郊外へ移る。</li>
+<li>自動車利用が増え、中心部の徒歩圏商業が弱くなる。</li>
+<li>中心部の居住者と若年層が減る。</li>
+<li>空き家・空き店舗が増え、駐車場化する。</li>
+<li>祭礼・自治会・町家維持の担い手が減る。</li>
+<li>地元客の来街理由が弱まり、中心部が観光またはイベント頼みになる。</li>
+</ol>
+<p>つまり、中心市街地空洞化は「商店街の努力不足」ではなく、都市構造、交通手段、消費行動、公共施設配置、人口移動が同時に変わった結果だった。</p>
+<h3 id="_7">まちづくりへの示唆</h3>
+<ul>
+<li><strong>観光客だけでは中心市街地は維持できない。</strong> 戦後の衰退は地元の生活機能喪失から始まった。観光地化しても、住民の日常利用が戻らなければ、通行量は外的要因に左右される。</li>
+<li><strong>中心部の空き家は、駐車場化する前に利用権を確保する。</strong> 一度更地・駐車場になると、町並みの連続性は戻しにくい。空き家発生の早期把握、サブリース、暫定利用が必要である。</li>
+<li><strong>郊外大型店と競争しない機能を設計する。</strong> 日用品価格競争ではなく、歩いて楽しい、学べる、泊まれる、語れる、体験できる、地元の生活と結びつく機能が中心部の役割になる。</li>
+<li><strong>中心市街地の居住者を“観客”ではなく“担い手”として増やす。</strong> 住む人が増えれば、自治会、祭礼、夜間営業、公共空間利用、学校・子育ての需要が生まれる。</li>
+</ul>
+<hr>
+<h2 id="5-1988">5. 平成の再生（1988〜）: 黒壁と中心市街地再生の両面</h2>
+<h3 id="51">5.1 黒壁以前の準備: 市民会議、城再興、博物館都市構想</h3>
+<p>黒壁は突然生まれたのではない。国交省資料は、1980年に市民まちづくり研究会「ながはま21市民会議」が発足し、1982年に「風格あるまちづくり市民会議」が発足、1983年には市民の投資を伴う長浜城再興が行われたと整理している。長浜城再興では、地元出身財界人による1億5,000万円の寄附と、市民の自発的寄附2億8,000万円が投入された（出典: <a href="https://www.mlit.go.jp/singikai/kokudosin/keikaku/jiritsu/5/shiryou5-2.pdf">国土交通省 自立地域社会形成事例</a>）。</p>
+<p>市は1980年代に「博物館都市構想」を打ち出し、地域資源を活かして街全体を博物館のように魅力化する方向を示した。黒壁は、この市民意識、寄附文化、景観意識、行政ビジョンの土壌の上に立った。</p>
+<h3 id="52">5.2 黒壁の設立経緯と出資構造</h3>
+<p>黒壁の直接の契機は、明治期に建てられ「黒壁銀行」と呼ばれた旧第百三十銀行長浜支店の保存問題である。黒壁公式サイトによれば、昭和62年（1987）に同建物がカトリック教会移転により売却契約され、地元有志が保存・活用を目指して第三セクター設立を計画した。昭和63年（1988）4月11日、第三セクター株式会社黒壁が設立され、資本金は1億3,000万円、内訳は長浜市4,000万円、民間8社9,000万円だった（出典: <a href="https://www.kurokabe.co.jp/about_kurokabe/">黒壁公式 黒壁について</a>）。</p>
+<p>長浜市の第三セクター等経営健全化方針も、民間企業8社と長浜市の出資1億3,000万円で設立されたと説明している（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000005/5809/kurokabe_kenzenka.pdf">長浜市 第三セクター等経営健全化方針</a>）。</p>
+<p>矢部拓也のJ-STAGE論文は、行政の出資比率が50%未満で、市長や助役が社長に就かなかったことを、黒壁の経営的成功要因の一つとして扱っている（出典: <a href="https://doi.org/10.5637/jpasurban1983.2000.51">矢部拓也 2000 J-STAGE</a>）。行政の信用は得るが、経営判断は民間が主導する。このバランスが初期黒壁の重要な制度設計だった。</p>
+<h3 id="53">5.3 事業モデル: 旧銀行保存ではなく、ガラスという新コンテンツを入れた</h3>
+<p>黒壁は、保存運動だけでは終わらなかった。1988年、役員が小樽や広島、欧州などのガラス事業を視察し、ガラスをテーマにした事業展開を決めた。1989年7月、黒壁スクエアは、黒壁ガラス館、スタジオクロカベ、レストランの3店舗で開業した（出典: <a href="https://www.kurokabe.co.jp/about_kurokabe/">黒壁公式 黒壁について</a>）。</p>
+<p>奈良県立大学リポジトリの論文は、開業前の月4,000人の来街者が2万人に増えたと整理している。さらに来客が伸びたため、北国街道沿いへガラス関連店舗を展開する「ガラス街道」構想が生まれた（出典: <a href="https://narapu.repo.nii.ac.jp/record/987/files/KJ00008747679.pdf">奈良県立大学リポジトリ論文</a>）。</p>
+<p>黒壁が機能した理由は、歴史的建築物を保存したからだけではない。むしろ、保存建築へ「ガラス工芸」という当時の長浜にはなかった新しいコンテンツを入れ、周辺町家へ展開したことが重要だった。</p>
+<h3 id="54">5.4 空き店舗対策: 所有と利用の分離、利用権の集約</h3>
+<p>黒壁型まちづくりの核心は、不動産所有権を買い集めることではなく、利用権を束ねることだった。</p>
+<p>第2期中心市街地活性化基本計画は、中心市街地の不動産所有権が細分化し、小規模不動産経営では再投資が行われず、空き家・空き店舗が増える傾向にあると整理する。そのうえで、黒壁や新長浜計画などの市民ディベロッパーが、空き地・空き店舗の利用権を一括で取得し、不動産の合同運用によってテナントミックス・リーシングを実践してきたと説明している（出典: <a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期長浜市中心市街地活性化基本計画</a>）。</p>
+<p>具体的には、黒壁は平成元年から、黒壁ガラス館を拠点に北国街道周辺の建物を借家契約等で利用権集約し、ガラスショップやレストランを継続運営した。新長浜計画は平成8年（1996）設立後、黒壁スクエア周辺の空き町家の利用権を取得し、改修投資をしたうえで新規出店者へ転貸するディベロッパー業務を担った。</p>
+<p>この仕組みが優れていた点は、次の通りである。</p>
+<ul>
+<li>所有権を買わず、初期投資を抑える。</li>
+<li>オーナーは所有を維持しながら賃料を得る。</li>
+<li>まちづくり会社が利用権を束ね、テナント構成と景観を調整する。</li>
+<li>テナントは単独で古町家を借りるより出店しやすい。</li>
+<li>街全体の回遊性と景観が上がり、周辺不動産価値も上がる。</li>
+</ul>
+<p>これは、現代のエリアリノベーション、サブリース、リノベーションまちづくりの先行例である。</p>
+<h3 id="55">5.5 周辺のまちづくり会社群</h3>
+<p>黒壁の成功後、周辺には複数のまちづくり主体が生まれた。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>組織</th>
+<th>時期・役割</th>
+<th>機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>株式会社黒壁</td>
+<td>1988設立、1989開業</td>
+<td>旧銀行保存、ガラス館、店舗群運営、観光商業の核</td>
+</tr>
+<tr>
+<td>株式会社新長浜計画</td>
+<td>1996設立</td>
+<td>空き町家の利用権取得、改修、転貸、テナントミックス</td>
+</tr>
+<tr>
+<td>NPO法人まちづくり役場</td>
+<td>1998設立</td>
+<td>視察受け入れ、人材研修、地域づくり塾、情報発信</td>
+</tr>
+<tr>
+<td>神前西開発株式会社</td>
+<td>2000年代以降の中活事業で登場</td>
+<td>複数町家の再投資・再稼働、テナント事業</td>
+</tr>
+<tr>
+<td>長浜まちづくり株式会社</td>
+<td>2009設立</td>
+<td>中心市街地180haのトータルタウンマネジメント、駐車場、不動産、町家再生、受託事業</td>
+</tr>
+</tbody>
+</table></div>
+<p>中小機構の事例記事によれば、長浜まちづくり株式会社は、観光商業が達成された一方で市街地居住者が減少していたことを背景に、商業・居住・コミュニティを中立的に推進する目的で設立された。主な収益は駐車場運営、不動産収入、受託事業、視察・講演・コンサルティング、安藤家入館料などで、補助金だけに依存しない自主事業確立を重視している（出典: <a href="https://machi.smrj.go.jp/machi/interview_block/nagahama_machidukuri.html">中小機構 まちかつ 長浜まちづくり株式会社</a>）。</p>
+<h3 id="56">5.6 中心市街地活性化基本計画と数値目標</h3>
+<p>長浜市は、2009年6月に中心市街地活性化基本計画の国認定を受けた。近畿財務局資料によれば、第1期計画は、歴史・文化の保全、経済の活性化、美しく住みよい生活環境の実現を鼎立させ、中心市街地ならではの新しいライフスタイル、定住環境、滞在・宿泊環境を整えることを目指した（出典: <a href="https://lfb.mof.go.jp/kinki/content/000013954.pdf">近畿財務局資料</a>）。</p>
+<p>第1期計画の数値目標は次の通りである。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指標</th>
+<th style="text-align: right;">現状値</th>
+<th style="text-align: right;">目標値</th>
+<th>出典</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>歩行者・自転車通行量</td>
+<td style="text-align: right;">32,240人/日（H16〜H20平均）</td>
+<td style="text-align: right;">32,700人/日</td>
+<td><a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期中活計画</a></td>
+</tr>
+<tr>
+<td>宿泊者数</td>
+<td style="text-align: right;">309,300人（H19）</td>
+<td style="text-align: right;">339,000人</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>中心市街地居住人口</td>
+<td style="text-align: right;">10,672人（H21.3末）</td>
+<td style="text-align: right;">11,000人</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>参考: 中心市街地来街者数</td>
+<td style="text-align: right;">193万人</td>
+<td style="text-align: right;">200万人維持</td>
+<td><a href="https://lfb.mof.go.jp/kinki/content/000013954.pdf">近畿財務局資料</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>第2期計画では、歩行者・自転車通行量について、平成24年の35,018人/日から平成31年の36,800人/日を目指した。また、対策を講じない場合の平成30年推計は26,503人/日とされ、事業効果で36,862人/日を見込む設計だった（出典: <a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期長浜市中心市街地活性化基本計画</a>）。</p>
+<p>ただし、第1期の検証では、歩行者・自転車通行量は大型イベントで一時的に目標を上回ったものの、直近値では目標を下回った。通行量に占める休日、つまり観光客の割合が7割を超え、観光客動向に左右されたことが課題として挙げられている。</p>
+<h3 id="57">5.7 成功要因</h3>
+<p>平成の長浜再生が機能した理由は、次のように整理できる。</p>
+<h4 id="1">1. 危機の可視化があった</h4>
+<p>1970年代から1980年代にかけ、商店街の店舗数・来街者数が大きく減少した。旧銀行の解体危機は、抽象的な危機感を具体的な保存・活用プロジェクトへ変えた。</p>
+<h4 id="2_1">2. 行政ビジョンと民間経営の役割分担があった</h4>
+<p>市は博物館都市構想、景観施策、補助制度、中心市街地活性化計画を用意した。黒壁は民間主導で店舗運営、商品開発、テナント展開を行った。行政が経営しすぎず、民間が公共性を担った。</p>
+<h4 id="3_1">3. 保存建築へ新コンテンツを入れた</h4>
+<p>黒壁銀行を単なる記念館にせず、ガラス館、工房、レストラン、ショップにした。歴史性と新規性を組み合わせたことで、日帰り観光客にも分かりやすい目的地になった。</p>
+<h4 id="4">4. 面的展開に早く移った</h4>
+<p>1館の成功にとどまらず、北国街道沿いの町家へ展開した。1996年までに関連店舗は23店舗に広がり、観光客の回遊を生んだ（出典: <a href="https://www.mlit.go.jp/singikai/kokudosin/keikaku/jiritsu/5/shiryou5-2.pdf">国交省資料</a>）。</p>
+<h4 id="5">5. 収益事業と景観形成を結びつけた</h4>
+<p>空き店舗改修、ファサード整備、テナントリーシング、ガラス工芸販売、飲食、体験、町家転貸が、別々の施策ではなく一体化した。</p>
+<h3 id="58">5.8 限界と経営難</h3>
+<p>黒壁は成功事例である一方、2010年代には経営難が顕在化した。長浜市の第三セクター等経営健全化方針は、平成10年頃から財務状況が低迷し、景気後退、マーケティング力・企画力の弱さなどにより収益力が低下したとする。平成25年には店舗再ブランディングや地元産品開発等のため大規模リノベーションを行い、市は5,000万円の増資と補助金を交付した。なお同資料内では、補助金額について本文に2億円、表に2億2,500万円と記載があり、資料内で表記に幅がある（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000005/5809/kurokabe_kenzenka.pdf">長浜市 第三セクター等経営健全化方針</a>）。</p>
+<p>平成30年3月末時点では、総資産額952百万円、累積欠損額355百万円、長期借入金残高618百万円、売上高608百万円という状況だった。同方針は、当初と異なり消費動向がモノからコトへ変わる中で、使命、ビジョン、事業戦略、ブランドの転換が不十分だったことを根本要因として挙げている。</p>
+<p>課題は、観光客数が多いのに利益が残りにくい構造である。</p>
+<ul>
+<li>年間200万人規模の来街者に対応するモデルだったため、地域住民やBtoB営業が弱かった。</li>
+<li>店舗ごとのコンテンツや個性が不足した。</li>
+<li>ガラス作家の育成・定着が弱く、黒壁スクエア外へガラス文化が十分広がらなかった。</li>
+<li>まちづくりという第三セクターとしての使命が薄れた。</li>
+<li>大規模投資の回収が不十分で、債務が重くなった。</li>
+</ul>
+<h3 id="59-2020">5.9 2020年代の再建: 第二会社方式へ</h3>
+<p>新型コロナ禍は黒壁に追加打撃を与えた。滋賀夕刊の2026年6月26日記事によれば、黒壁は2020年度に売上高が約3億4,000万円へ落ち込み、営業損失約1億2,900万円を計上した。その後、地域経済活性化支援機構（REVIC）が2021年から支援し、2023年4月から常駐経営改革が進んだ。2025年度の売上高は約6億円、営業利益は5,700万円で創業以来最高水準となったとされる（出典: <a href="https://shigayukan.com/%E5%A5%A5%E4%BC%8A%E5%90%B9%EF%BD%88%EF%BD%84%E3%81%8C%E7%B5%8C%E5%96%B6%E4%B8%BB%E5%B0%8E%E3%81%B8/">滋賀夕刊 2026年6月26日</a>）。</p>
+<p>同記事によれば、2026年には新会社による第二会社方式で再建を進めることが決まり、新会社の出資総額は9,000万円、内訳は長浜市4,000万円、奥伊吹ホールディングス4,000万円、長浜商工会議所500万円、長浜米原観光協会500万円である。新会社は事業・雇用・不動産と返済可能な約3億円の債務を承継し、残る約4億4,000万円の債務は現会社側で特別清算により整理する方針とされる。財経新聞も、現会社の債務7億4,000万円、新会社資本金9,000万円、市出資4,000万円、2024年の黒壁ガラス館来訪者約183万人などを報じている（出典: <a href="https://www.zaikei.co.jp/article/20260619/857604.html">財経新聞 2026年6月19日</a>）。</p>
+<p>これは、黒壁が「失敗した」というより、<strong>成功モデルを更新するために資本構造を組み替える段階に入った</strong>と見るべきである。観光客を集める力は残っているが、過去投資と債務を切り離し、データ活用、商品再設計、経営責任、広域観光事業者との連携を強める必要が出た。</p>
+<h3 id="_8">まちづくりへの示唆</h3>
+<ul>
+<li><strong>保存は入口であり、事業内容が成否を決める。</strong> 黒壁銀行の保存だけなら、街全体の回遊は生まれなかった。現代の町家・寺院・湖岸開発も、何を体験し、何を買い、誰と会えるかを明確にする必要がある。</li>
+<li><strong>所有権より利用権を束ねる。</strong> 長浜型の強みは、空き店舗の利用権を集約し、景観とテナントミックスを調整したことにある。個別買収にこだわるより、借り上げ、サブリース、運営委託、共同改修の仕組みが有効である。</li>
+<li><strong>観光客数ではなく、利益・滞在・地元利用を指標にする。</strong> 200万人来街しても、客単価低下や債務負担があれば持続しない。宿泊者数、夜間売上、地元会員、リピート率、粗利、文化維持基金への還流額を追うべきである。</li>
+<li><strong>第三セクターは“公共性のある民間経営”として設計する。</strong> 行政出資は信用と公益性を与えるが、経営判断を曖昧にすると責任が薄れる。出資比率、取締役構成、KPI、撤退基準、追加投資基準を明示すべきである。</li>
+<li><strong>成功後の再投資ルールを先につくる。</strong> 黒壁の課題は、老朽化・再ブランディング・商品更新・人材育成に継続投資が必要だった点にある。初期開発だけでなく、10年後、20年後の更新資金を事業計画に組み込む必要がある。</li>
+<li><strong>“黒壁の次”は、観光商業と生活機能の統合である。</strong> 第2期中活計画が指摘する通り、休日観光客依存では通行量が安定しない。住民が日常的に使う食、学び、医療、子育て、仕事、夜の居場所を重ねるべきである。</li>
+</ul>
+<hr>
+<h2 id="6">6. 現在: 合併後の市域、人口動態、都市計画の方向性</h2>
+<h3 id="61">6.1 平成の合併後の市域</h3>
+<p>長浜市は、平成18年（2006）2月13日に旧長浜市、浅井町、びわ町の1市2町が合併し、人口約84,000人の都市となった。さらに平成22年（2010）1月1日、虎姫町、湖北町、高月町、木之本町、余呉町、西浅井町の6町を編入合併し、人口約126,000人となった。長浜市都市計画マスタープラン・立地適正化計画は、令和7年（2025）4月現在の人口を111,807人としている（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1239/1r1.pdf">長浜市 都市計画マスタープラン・立地適正化計画 第1部</a>）。</p>
+<p>合併後の長浜市は、旧城下町中心部だけでなく、木之本、高月、余呉、西浅井、湖北、虎姫、浅井、びわなどの生活圏を含む広域都市になった。したがって、現在のまちづくりは「旧中心市街地をどう再生するか」だけでなく、<strong>複数の生活圏をどう結び、どこに機能を集約し、どこを守るか</strong>という問題になっている。</p>
+<h3 id="62">6.2 人口動態</h3>
+<p>立地適正化計画は、令和27年（2045）の将来人口を約88,000人、具体的には87,850人とし、令和2年（2020）の113,636人の約80%まで減少すると推計している。高齢化率は令和2年の約29.3%から令和27年には約36.1%へ上昇する見込みである（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1239/4.pdf">長浜市 立地適正化計画 第4部</a>）。</p>
+<p>人口減少は、中心市街地だけでなく、市域北部・田園・森林地域、公共交通維持、公共施設更新、祭礼・自治会・空き家に影響する。今後の都市開発は、成長前提ではなく、人口密度、財政、公共交通、災害リスクを同時に見ながら行う必要がある。</p>
+<h3 id="63">6.3 現行都市計画・立地適正化計画の方向性</h3>
+<p>長浜市は令和7年（2025）10月に、都市計画マスタープラン改定と立地適正化計画策定を行っている。計画は、都市機能や住居等がまとまって立地するコンパクトなまちをつくり、市域全体で持続可能なまちづくりを目指すものと位置づけられている（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1239/gaiyoubann.pdf">長浜市 都市計画マスタープラン・立地適正化計画 概要版</a>）。</p>
+<p>将来都市構造は「集約型多核都市構造」である。二度の合併を経た長浜市には、旧町の中心市街地などを核とした生活圏が複数あり、それぞれを鉄道や道路で結ぶ考え方である。</p>
+<p>概要版では、主な方向性として次が示されている。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>領域</th>
+<th>方向性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中心市街地地域圏</td>
+<td>多様な都市機能を持つ中心市街地核、歴史文化を感じられる賑わいと都市居住の融合</td>
+</tr>
+<tr>
+<td>木之本・高月地域圏</td>
+<td>長浜北部地域の生活拠点としての都市機能集約</td>
+</tr>
+<tr>
+<td>田村駅周辺</td>
+<td>地域住民・市内企業・関係人口の交流、新ビジネス創出、産業・文教拠点</td>
+</tr>
+<tr>
+<td>北国街道・木之本宿</td>
+<td>歴史的まちなみを活用した商業観光機能強化</td>
+</tr>
+<tr>
+<td>土地利用</td>
+<td>都市拠点を中心に商業・工業・住居系土地利用を促進</td>
+</tr>
+<tr>
+<td>公共交通</td>
+<td>拠点へのアクセスを支える生活交通ネットワークの形成</td>
+</tr>
+<tr>
+<td>景観</td>
+<td>歴史的風致維持向上計画、景観まちづくり計画と連携</td>
+</tr>
+</tbody>
+</table></div>
+<p>立地適正化計画では、都市機能集積区域が255ha、居住集積区域が644haとされ、中心地区、長浜沿道地区、田村駅周辺地区などが設定されている。中心市街地地区の居住集積区域は595.9haである（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1239/gaiyoubann.pdf">長浜市 都市計画マスタープラン・立地適正化計画 概要版</a>）。</p>
+<h3 id="64">6.4 観光の現在: 来訪者数より宿泊・滞在への転換</h3>
+<p>第2期長浜市観光振興ビジョン資料編によれば、長浜市の観光入込客数は約20年間、年間約700万人で推移し、直近5年間の日帰り入込客数は年間約660万人、宿泊者数は年間約43万人だった。令和2年（2020）は新型コロナの影響で、日帰り入込客数429万人、宿泊客数25万人へ減少した（出典: <a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000011/11263/vision_shiryou.pdf">第2期長浜市観光振興ビジョン 資料編</a>）。</p>
+<p>同資料では、日帰り観光客1人あたり観光消費額は平成27年（2015）の4,044円から令和元年（2019）の4,484円、令和2年（2020）の4,817円へ増加した。一方、宿泊観光客の1人あたり観光消費額は平成27年の21,410円から令和元年の24,541円、令和2年の24,380円であり、日帰りより宿泊の経済波及が大きい。</p>
+<p>黒壁周辺観光客については、長浜市外で宿泊して長浜へ来る割合が約20%で安定しているとされ、純日帰り客や市外宿泊客を市内宿泊へ誘導することが課題とされている。</p>
+<p>このことは、長浜の事業機会を示す。長浜には人が来ている。しかし、日帰り中心である。したがって、今後の中心は「集客数を増やす」ことより、<strong>市内で泊まる理由、夜も過ごす理由、翌朝も歩く理由をつくること</strong>である。</p>
+<h3 id="65">6.5 「湖の辺のまち 長浜未来ビジョン」</h3>
+<p>長浜市は、中心市街地活性化基本計画終了後の指針として、<a href="https://www.city.nagahama.lg.jp/0000011278.html">湖の辺のまち 長浜未来ビジョン</a>を策定している。同ビジョンは、中心市街地を核としたまちづくりの指針であり、駅、黒壁、豊公園、琵琶湖、米川、街路、公園、水辺を結ぶウォーカブルなまちづくり、リノベーション推進、エリアプラットフォームを重視する。</p>
+<p>中小機構の中心市街地活性化協議会支援センターは、長浜市が第2期計画で経済産業省の特定民間中心市街地経済活力向上事業を活用し、体験型複合施設「湖のスコーレ」を整備したこと、2020年の第2期計画終了後は未来ビジョンに基づき、HUBを活用したまちづくりへ進んでいることを紹介している（出典: <a href="https://machi.smrj.go.jp/machi/public/example/nagahama_202302.html">まちかつ HUBを活用した新たなまちづくりの価値創造</a>）。</p>
+<p>この方向性は、長浜の歴史とよく合う。城下町期の長浜は、城・港・水路・町家・街道が一体だった。黒壁期の長浜は、北国街道と町家のリノベーションで再生した。次の長浜は、駅・黒壁・湖岸・豊公園・米川をつなぎ直す段階にある。</p>
+<h3 id="_9">まちづくりへの示唆</h3>
+<ul>
+<li><strong>旧長浜中心部だけでなく、市域全体の多核構造で考える。</strong> 合併後の長浜は、中心市街地、木之本・高月、田村駅周辺、奥びわ湖など複数の核を持つ。中心部の投資は、北部・湖岸・田園地域との送客や人材循環まで設計すべきである。</li>
+<li><strong>宿泊化が最大の余地である。</strong> 年間約700万人規模の来訪実績がある一方、宿泊は約43万人規模にとどまる。宿泊、朝食、夜間営業、早朝体験、湖上・寺社・祭礼・食文化を組み合わせることが重要である。</li>
+<li><strong>立地適正化計画を逆風ではなく投資判断の地図にする。</strong> 居住集積区域、都市機能集積区域、公共交通軸、防災リスクを踏まえれば、民間投資の優先順位が明確になる。</li>
+<li><strong>湖岸と中心部を再接続する。</strong> 長浜の原点は、水運と街道の接続である。豊公園、長浜港、米川、黒壁、駅を一つの回遊圏にし、湖を眺めるだけでなく、食べる、学ぶ、泊まる、働く場へ変える必要がある。</li>
+<li><strong>関係人口を“観光客以上、移住者未満”の担い手にする。</strong> 未来ビジョンが掲げるエリアプラットフォームは、外部人材と地元人材をつなぐ器になり得る。黒壁期の外部プロデューサーやUターン人材の役割を、現代的に制度化できる。</li>
+</ul>
+<hr>
+<h2 id="7">7. 横断的なまちづくり原則</h2>
+<p>長浜の歴史から、依頼者自身のまちづくり計画に応用できる原則を整理する。</p>
+<h3 id="71">7.1 「核」ではなく「核の連鎖」をつくる</h3>
+<p>長浜は、長浜城、大通寺、北国街道、長浜湊、長浜駅、黒壁、豊公園という核を持ってきた。しかし、核が単体で強かった時代より、核同士が接続した時代に街は伸びている。</p>
+<p>現代計画では、例えば次のような連鎖を設計するべきである。</p>
+<pre><code class="language-text">長浜駅
+  ↓
+駅前・えきまち・公共施設
+  ↓
+黒壁・北国街道・商店街
+  ↓
+大通寺・曳山・町家
+  ↓
+米川・豊公園・長浜港・琵琶湖
+  ↓
+宿泊・朝の体験・湖岸滞在
+</code></pre>
+<h3 id="72">7.2 町家・寺院・湖岸を「保存対象」ではなく「運営資産」にする</h3>
+<p>長浜の成功は、歴史資源を眺めるだけの対象にせず、使う器に変えたことにある。旧銀行はガラス館になり、町家は店舗・宿・シェアオフィスになり、山組は祭礼運営の単位として残った。</p>
+<p>保存と活用を対立させず、次のように分解して考える必要がある。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>資産</th>
+<th>保存すべきもの</th>
+<th>活用で更新すべきもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>町家</td>
+<td>外観、構造、路地、奥行き、庭</td>
+<td>宿泊、飲食、工房、住居、オフィス</td>
+</tr>
+<tr>
+<td>寺院</td>
+<td>由緒、儀礼、境内、信仰</td>
+<td>文化体験、朝の場、学び、広場、宿坊的滞在</td>
+</tr>
+<tr>
+<td>湖岸</td>
+<td>景観、水辺、生態系</td>
+<td>朝市、湖魚食、サイクリング、外気浴、舟運体験</td>
+</tr>
+<tr>
+<td>商店街</td>
+<td>町割り、山組、歩行性</td>
+<td>テナントミックス、夜間営業、生活サービス</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="73">7.3 利用権を束ねる会社・基金・組合を持つ</h3>
+<p>黒壁と新長浜計画の教訓は、個別所有者のままでは街は動かないが、全件買収しなくても街は運営できるという点にある。</p>
+<p>必要なのは、次のような中間主体である。</p>
+<ul>
+<li>空き家・空き店舗の情報を集める。</li>
+<li>所有者と借り手の間で改修・家賃・期間を調整する。</li>
+<li>デザインコードを守る。</li>
+<li>テナントミックスを考える。</li>
+<li>小さな収益事業を複数持つ。</li>
+<li>事業収益の一部を文化維持へ還流する。</li>
+</ul>
+<p>これは株式会社でも、一般社団法人でも、まちづくり会社でもよい。ただし、補助金だけでは持続しない。駐車場、不動産転貸、宿泊、飲食、会員、イベント、視察、コンサルティングなど、自主財源を持つ必要がある。</p>
+<h3 id="74">7.4 「観光客数」から「滞在の質」へ指標を変える</h3>
+<p>黒壁の経験は、来街者数だけでは経営の健全性を測れないことを示している。今後のKPIは、次のように設計するのが望ましい。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>領域</th>
+<th>指標例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>滞在</td>
+<td>市内宿泊者数、平均滞在時間、夜間滞在率、朝の消費額</td>
+</tr>
+<tr>
+<td>経済</td>
+<td>客単価、粗利、地元調達率、文化維持基金への拠出額</td>
+</tr>
+<tr>
+<td>回遊</td>
+<td>駅-黒壁-大通寺-湖岸の通行量、複数施設利用率</td>
+</tr>
+<tr>
+<td>生活</td>
+<td>地元住民利用率、中心市街地居住者数、子育て世代利用</td>
+</tr>
+<tr>
+<td>空間</td>
+<td>空き家再稼働件数、駐車場化抑制件数、町家改修件数</td>
+</tr>
+<tr>
+<td>担い手</td>
+<td>山組・自治会参加者、若手事業者数、関係人口会員数</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="75">7.5 長浜らしい「資本循環」を明示する</h3>
+<p>長浜の歴史では、富が町へ戻る仕組みが強かった。年貢免除により町衆に残った余剰、浜縮緬の富、開知学校への寄附、長浜城再興への寄附、黒壁への民間出資は、いずれも街の資本循環である。</p>
+<p>現代の計画でも、収益の使途を最初から示すとよい。</p>
+<pre><code class="language-text">宿泊・飲食・体験の収益
+  ↓
+町家・寺院・山蔵・水辺の維持基金
+  ↓
+祭礼・景観・公共空間・若手人材への再投資
+  ↓
+街の魅力向上
+  ↓
+再訪・宿泊・関係人口増
+</code></pre>
+<hr>
+<h2 id="_10">参考資料・主要出典</h2>
+<h3 id="_11">長浜市公式・行政資料</h3>
+<ul>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/0000001238.html">第2期長浜市歴史的風致維持向上計画</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_1.pdf">第2期長浜市歴史的風致維持向上計画 第1章</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_2-1.pdf">第2期長浜市歴史的風致維持向上計画 第2章 近世城下町の町割り</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_2-2.pdf">第2期長浜市歴史的風致維持向上計画 第2章 長浜曳山祭</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1238/R8rekimachikeikaku_2-3.pdf">第2期長浜市歴史的風致維持向上計画 第2章 大通寺と門前町・街道</a>」</li>
+<li>内閣府地方創生推進事務局「<a href="https://www.chisou.go.jp/tiiki/chukatu/pdf_nintei/152_nagahama_full.pdf">第2期長浜市中心市街地活性化基本計画</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/0000001628.html">中心市街地活性化のまちづくり推進計画</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000005/5809/kurokabe_kenzenka.pdf">株式会社黒壁 第三セクター等経営健全化方針</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/0000001239.html">都市計画マスタープラン・立地適正化計画</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1239/gaiyoubann.pdf">都市計画マスタープラン・立地適正化計画 概要版</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1239/1r1.pdf">都市計画マスタープラン・立地適正化計画 第1部</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000001/1239/4.pdf">都市計画マスタープラン・立地適正化計画 第4部</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000011/11263/vision_shiryou.pdf">第2期長浜市観光振興ビジョン 資料編</a>」</li>
+<li>長浜市「<a href="https://www.city.nagahama.lg.jp/0000011278.html">湖の辺のまち 長浜未来ビジョン</a>」</li>
+</ul>
+<h3 id="_12">国・公的機関の事例資料</h3>
+<ul>
+<li>国土交通省「<a href="https://www.mlit.go.jp/singikai/kokudosin/keikaku/jiritsu/5/shiryou5-2.pdf">歴史的なまちなみを生かした中心市街地の活性化 滋賀県長浜市</a>」</li>
+<li>近畿財務局「<a href="https://lfb.mof.go.jp/kinki/content/000013954.pdf">長浜市中心市街地活性化に関する資料</a>」</li>
+<li>中小機構 中心市街地活性化協議会支援センター「<a href="https://machi.smrj.go.jp/machi/interview_block/nagahama_machidukuri.html">長浜まちづくり株式会社</a>」</li>
+<li>中小機構 中心市街地活性化協議会支援センター「<a href="https://machi.smrj.go.jp/machi/public/example/nagahama_202302.html">HUB（結節点）を活用した新たなまちづくりの価値創造（滋賀県長浜市）</a>」</li>
+<li>中小企業庁「<a href="https://www.chusho.meti.go.jp/shogyo/shogyo/shoutengai77sen/download/77sen_03machi.pdf">がんばる商店街77選 まちづくりと一体となった商業活動</a>」</li>
+</ul>
+<h3 id="_13">学術論文・研究資料</h3>
+<ul>
+<li>矢部拓也「<a href="https://doi.org/10.5637/jpasurban1983.2000.51">地方小都市再生の前提条件: 滋賀県長浜市第三セクター『黒壁』の登場と地域社会の変容</a>」『日本都市社会学会年報』2000年、J-STAGE。</li>
+<li>奈良県立大学リポジトリ「<a href="https://narapu.repo.nii.ac.jp/record/987/files/KJ00008747679.pdf">コモンズとしての商店街の持続可能性</a>」</li>
+<li>河村茂「<a href="https://www.reinet.or.jp/pdf/chihousousei/report/No03-2015Mar.pdf">滋賀・長浜 中心市街更新“観光商業の創生”物語</a>」不動産流通推進センター系資料。</li>
+<li>土地総合研究所「<a href="https://www.lij.jp/html/jli/jli_2022/2022autumn_p037.pdf">長浜の中心市街地再生に関する資料</a>」</li>
+</ul>
+<h3 id="_14">黒壁・報道</h3>
+<ul>
+<li>黒壁公式サイト「<a href="https://www.kurokabe.co.jp/about_kurokabe/">黒壁について</a>」</li>
+<li>滋賀夕刊「<a href="https://shigayukan.com/%E5%A5%A5%E4%BC%8A%E5%90%B9%EF%BD%88%EF%BD%84%E3%81%8C%E7%B5%8C%E5%96%B6%E4%B8%BB%E5%B0%8E%E3%81%B8/">奥伊吹HDが黒壁経営主導へ</a>」2026年6月26日。</li>
+<li>財経新聞「<a href="https://www.zaikei.co.jp/article/20260619/857604.html">滋賀の観光地『黒壁スクエア』運営3セク、新会社設立して債務切り離しへ</a>」2026年6月19日。</li>
+</ul>
+      <div class="source-note">このHTMLはMarkdown版 <code>長浜市_街の発展開発史_まちづくり示唆.md</code> から生成しました。出典リンクは本文および参考資料内に保持しています。</div>
+    </article>
+  </main>
+</body>
+</html>
